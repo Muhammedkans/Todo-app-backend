@@ -56,7 +56,7 @@ const login = async (req,res)=>{
 
     if(!passwordcompare){
       return res.status(401).json({ message: "Incorrect password" });
-    }
+    }   
 
    const token = await jwt.sign({id:user._id},process.env.JWT_SECRET,{expiresIn:"7d"});
 

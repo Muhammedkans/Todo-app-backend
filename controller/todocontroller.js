@@ -65,6 +65,9 @@ const updateTodo = async (req, res)=>{
       throw new Error(" onvalid credential no todo");
    }
 
+
+
+   
     const {title , completed} =req.body;
 
     if(title !== undefined && typeof title !== "string" ){

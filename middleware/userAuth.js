@@ -16,7 +16,7 @@ const userAuth = async (req,res,next)=>{
       throw new Error("please login");
     }
     
-    const {id} = decoded;
+    const {id} = decoded;   
   
     const user = await User.findById(id);
     if(!user){
